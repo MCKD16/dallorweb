@@ -18,4 +18,5 @@ async def on_member_join(member):
 	channel = discord.utils.get(member.guild.channels, name='환영합니다.')
 	await channel.send(f'hey there, {member.mention}, welcome to my server!')
 
-client.run("Nzg1NzczODYyNTQxMzI4Mzg0.X88u7w.UKlQx6DrBmcc5Rey9_DbVZnPOgA")
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
