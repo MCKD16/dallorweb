@@ -9,8 +9,7 @@ client = discord.Client()
 async def on_ready():
 	print(client.user.id)
 	print("ready")
-	game = discord.Game("Use &help Command!")
-	await client.change_presence(statusdiscord.Status.Online, activity=game)
+	await client.change_presence(game=discord.Game(name='', type=1))
 
 @client.event
 async def on_member_join(member):
